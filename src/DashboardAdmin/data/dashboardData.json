@@ -1,0 +1,77 @@
+{
+  "stats": [
+    {
+      "label": "Total Pesanan",
+      "value": "1,248",
+      "iconName": "IoShirtOutline",
+      "color": "#3b82f6",
+      "bgIcon": "bg-blue-50"
+    },
+    {
+      "label": "Pesanan Selesai",
+      "value": "1,180",
+      "iconName": "IoCubeOutline",
+      "color": "#10b981",
+      "bgIcon": "bg-green-50"
+    },
+    {
+      "label": "Sedang Diproses",
+      "value": "45",
+      "iconName": "IoTimeOutline",
+      "color": "#f59e0b",
+      "bgIcon": "bg-yellow-50"
+    },
+    {
+      "label": "Pesanan Batal",
+      "value": "23",
+      "iconName": "IoCloseCircleOutline",
+      "color": "#ef4444",
+      "bgIcon": "bg-red-50"
+    }
+  ],
+  "orders": [
+    {
+      "name": "Ahmad Rizky",
+      "address": "Jl. Mawar No. 12, Jakarta",
+      "date": "15 Jan 2025",
+      "time": "08:00",
+      "status": "Selesai"
+    },
+    {
+      "name": "Siti Aminah",
+      "address": "Jl. Melati No. 45, Bandung",
+      "date": "15 Jan 2025",
+      "time": "09:30",
+      "status": "Diproses"
+    },
+    {
+      "name": "Budi Santoso",
+      "address": "Jl. Anggrek No. 8, Surabaya",
+      "date": "14 Jan 2025",
+      "time": "10:15",
+      "status": "Dikirim"
+    },
+    {
+      "name": "Dewi Lestari",
+      "address": "Jl. Kenanga No. 22, Yogyakarta",
+      "date": "14 Jan 2025",
+      "time": "11:00",
+      "status": "Selesai"
+    },
+    {
+      "name": "Eko Prasetyo",
+      "address": "Jl. Cempaka No. 17, Semarang",
+      "date": "13 Jan 2025",
+      "time": "13:45",
+      "status": "Cancel"
+    },
+    {
+      "name": "Rina Wulandari",
+      "address": "Jl. Dahlia No. 5, Malang",
+      "date": "13 Jan 2025",
+      "time": "14:20",
+      "status": "Diproses"
+    }
+  ]
+}
+

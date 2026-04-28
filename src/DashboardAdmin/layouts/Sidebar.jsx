@@ -15,9 +15,12 @@ export default function Sidebar() {
     return (
         <aside className="min-h-screen w-[240px] bg-gradient-to-b from-[#4f8cff] to-[#3b6fd8] flex flex-col p-6 text-white">
             {/* Logo */}
-            <div className="mb-10">
-                <h1 className="font-poppins-semibold text-2xl leading-tight">LaundryExpress</h1>
-                <p className="text-sm text-blue-100 opacity-80 mt-1">Admin Dashboard</p>
+            <div className="mb-10 flex items-center gap-3">
+                <img src="/IconLaundry.png" alt="Laundry Express" className="w-10 h-10 object-contain rounded-lg" />
+                <div>
+                    <h1 className="font-poppins-semibold text-xl leading-tight">Laundry Express</h1>
+                    <p className="text-sm text-blue-100 opacity-80 mt-0.5">Admin Dashboard</p>
+                </div>
             </div>
 
             {/* Menu */}
@@ -46,7 +49,7 @@ export default function Sidebar() {
             {/* Footer */}
             <div className="mt-auto pt-6 border-t border-white/20">
                 <p className="text-xs text-blue-100 opacity-60 text-center">
-                    &copy; 2025 LaundryExpress
+                    &copy; 2025 Laundry Express
                 </p>
             </div>
         </aside>
