@@ -1,52 +1,54 @@
-import { CgUserList } from "react-icons/cg"; 
-import { GoListOrdered } from "react-icons/go"; 
-import { MdSpaceDashboard } from "react-icons/md"; 
+import { MdSpaceDashboard } from "react-icons/md";
+import { GoListOrdered } from "react-icons/go";
+import { IoCalendarOutline, IoLogOutOutline } from "react-icons/io5";
+import { CgUserList } from "react-icons/cg";
+
 export default function Sidebar() {
+    const menuItems = [
+        { icon: MdSpaceDashboard, label: "Dashboard", active: true },
+        { icon: GoListOrdered, label: "Pesanan", active: false },
+        { icon: IoCalendarOutline, label: "Jadwal", active: false },
+        { icon: CgUserList, label: "Keuangan", active: false },
+        { icon: IoLogOutOutline, label: "Keluar", active: false },
+    ];
+
     return (
-        <div id="sidebar" className ="flex min-h-screen w-90 flex-col bg-white p-10 shadow-lg">
+        <aside className="min-h-screen w-[240px] bg-gradient-to-b from-[#4f8cff] to-[#3b6fd8] flex flex-col p-6 text-white">
             {/* Logo */}
-            <div id="sidebar-logo" className="flex flex-col">
-                <span id="logo-title" className="font-poppins-extrabold text-[48px] text-gray-900">
-		                LaundryExpress <b id="logo-dot" className="text-hijau">.</b>
-		            </span>
-                <span id="logo-subtitle" className="font-semibold text-gray-400">Laundry Service Dashboard</span>
+            <div className="mb-10">
+                <h1 className="font-poppins-semibold text-2xl leading-tight">LaundryExpress</h1>
+                <p className="text-sm text-blue-100 opacity-80 mt-1">Admin Dashboard</p>
             </div>
 
-            {/* List Menu */}
-            <div id="sidebar-menu" className="mt-10">
-                <ul id="menu-list" className="space-y-3">
-                    <li>
-	                    <div id="menu-1" className="hover:text-hijau flex cursor-pointer items-center rounded-xl p-4 font-medium text-gray-600 hover:bg-green-200 hover:font-extrabold"> 
-                        <MdSpaceDashboard  className="mr-4 text-xl"/>
-                        Dashboard</div>
-	                  </li>
-                    <li>
-	                    <div id="menu-2" className="hover:text-hijau flex cursor-pointer items-center rounded-xl p-4 font-medium text-gray-600 hover:bg-green-200 hover:font-extrabold">
-                        <GoListOrdered className="mr-4 text-xl"/>  
-                        Pesanan</div>
-	                  </li>
-	                  <li>
-	                    <div id="menu-3" className="hover:text-hijau flex cursor-pointer items-center rounded-xl p-4 font-medium text-gray-600 hover:bg-green-200 hover:font-extrabold">
-                            <CgUserList className="mr-4 text-xl"/>
-                            Keuangan</div>
-	                  </li>
+            {/* Menu */}
+            <nav className="flex-1">
+                <ul className="space-y-2">
+                    {menuItems.map((item, index) => {
+                        const Icon = item.icon;
+                        return (
+                            <li key={index}>
+                                <div
+                                    className={`flex items-center gap-3 px-4 py-3 rounded-lg cursor-pointer transition-all duration-200 ${
+                                        item.active
+                                            ? "bg-white text-[#3b6fd8] font-inter-semibold shadow-md"
+                                            : "text-white/90 hover:bg-white/10 font-inter-medium"
+                                    }`}
+                                >
+                                    <Icon className="text-xl" />
+                                    <span className="text-sm">{item.label}</span>
+                                </div>
+                            </li>
+                        );
+                    })}
                 </ul>
-            </div>
+            </nav>
 
             {/* Footer */}
-            <div id="sidebar-footer" className="mt-auto">
-                <div id="footer-card" className="bg-hijau px-4 py-2 rounded-md shadow-lg mb-10 flex items-center">
-                    <div id="footer-text" className="text-white text-sm">
-                        <span>Please organize your menus through button below!</span>
-                        <div id="add-menu-button" className="flex justify-center items-center p-2 mt-3 bg-white rounded-md space-x-2">
-                            <span className="text-gray-600 flex items-center">Add Menus</span>
-                        </div>
-                    </div>
-                    <img id="footer-avatar" className="w-20 rounded-full" src="https://avatar.iran.liara.run/public/28" />
-                </div>
-                <span id="footer-brand" className="font-bold text-gray-400">Sedap Restaurant Admin Dashboard</span>
-                <p id="footer-copyright" className="font-light text-gray-400">&copy; 2025 All Right Reserved</p>
+            <div className="mt-auto pt-6 border-t border-white/20">
+                <p className="text-xs text-blue-100 opacity-60 text-center">
+                    &copy; 2025 LaundryExpress
+                </p>
             </div>
-        </div>
+        </aside>
     );
 }
